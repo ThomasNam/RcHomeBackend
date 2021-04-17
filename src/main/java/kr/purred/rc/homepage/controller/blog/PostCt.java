@@ -21,6 +21,12 @@ public class PostCt
 		return postSv.addPost (post);
 	}
 
+	@PutMapping("/post/{id}")
+	public Post updatePost (@PathVariable("id") String id, @RequestBody Post post)
+	{
+		return postSv.updatePost (id, post);
+	}
+
 	@GetMapping("/posts")
 	public List<Post> getPosts ()
 	{

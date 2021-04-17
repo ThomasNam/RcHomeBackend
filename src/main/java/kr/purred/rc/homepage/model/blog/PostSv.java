@@ -11,4 +11,6 @@ public interface PostSv
 	List<Post> getPosts ();
 
 	Post getPost (String id);
+
+	Post updatePost (String id, Post updatePost);
 }
