@@ -72,7 +72,8 @@ public class MyMemberSvImp implements MyMemberSv
 		{
 			PuApiResult puApiResult = puMemberSv.registerMember (puMemData);
 
-			System.out.println (puApiResult);
+			if (!puApiResult.isSuccess ())
+				throw new RegisterMemException ();
 		}
 		catch (Exception e)
 		{
