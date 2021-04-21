@@ -1,4 +1,4 @@
-package kr.purred.rc.homepage.controller.blog;
+package kr.purred.rc.homepage.controller.oapi.blog;
 
 import kr.purred.rc.homepage.model.blog.PostSv;
 import kr.purred.rc.homepage.model.blog.domains.Post;
@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/blog")
 @CrossOrigin
-public class PostCt
+public class OpenPostCt
 {
 	private final PostSv postSv;
 

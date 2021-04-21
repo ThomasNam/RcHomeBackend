@@ -4,6 +4,7 @@ import kr.purred.rc.homepage.model.exception.ExistDataException;
 import kr.purred.rc.homepage.model.exception.NoDataException;
 import kr.purred.rc.homepage.model.exception.NotSetRequiredDataException;
 import kr.purred.rc.homepage.model.member.data.RegisterMemberData;
+import kr.purred.rc.homepage.model.member.exception.RegisterMemException;
 import kr.purred.rc.homepage.model.member.searchData.MyMemberSearchData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,12 +21,11 @@ public interface MyMemberSv
 {
 	/**
 	 * UDPAY 회원을 등록한다.
-	 * @param upMemberData 회원 등록 정보
+	 * @param memberData 회원 등록 정보
 	 * @return 등록된 회원 정보
 	 */
-	MyMember registerMember (RegisterMemberData upMemberData) throws ExistDataException,
-			NoDataException,
-			NotSetRequiredDataException;
+	MyMember registerMember (RegisterMemberData memberData) throws ExistDataException,
+			NotSetRequiredDataException, RegisterMemException;
 
 
 	/**

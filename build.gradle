@@ -26,6 +26,9 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/com.konghq/unirest-java
+    implementation group: 'com.konghq', name: 'unirest-java', version: '3.6.01'
 }
 
 test {
